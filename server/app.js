@@ -15,7 +15,7 @@ app.all('/api/symbol/0/day', function(req, res, next){
     proxy.web(req, res, {target: ServerOne} );
 
 })
-app.all('/api/volumes/symbols/2', function(req, res, next){
+app.all('/api/volumes/symbols/', function(req, res, next){
     console.log('Redirecting Server2');
     proxy.web(req, res, {target: ServerTwo} );
 
