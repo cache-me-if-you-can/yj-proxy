@@ -1,17 +1,30 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "price-volume-chart-proxy",
+  "description": "> Project description",
+  "author": "Kangsik Lee",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon server/app.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
+    "http-proxy": "^1.17.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "nodemon": "^1.18.6"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TSON-RH/price-volume-chart-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TSON-RH/price-volume-chart-proxy/issues"
+  },
+  "homepage": "https://github.com/TSON-RH/price-volume-chart-proxy#readme"
 }
