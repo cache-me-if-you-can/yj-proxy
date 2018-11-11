@@ -1,30 +1,27 @@
 {
-  "name": "price-volume-chart-proxy",
-  "description": "> Project description",
-  "author": "Kangsik Lee",
-  "license": "ISC",
-  "engines": {
-    "node": ">=6.13.0"
-  },
-  "scripts": {
-    "start": "nodemon server/app.js"
-  },
-  "dependencies": {
-    "express": "^4.16.4",
-    "http-proxy": "^1.17.0"
-  },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
-    "nodemon": "^1.18.6"
-  },
+  "name": "proxy-stockpricechart",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon proxy/server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TSON-RH/price-volume-chart-proxy.git"
+    "url": "git+https://github.com/TSON-RH/Proxy-StockPriceChart.git"
   },
+  "author": "Kangsik Lee",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TSON-RH/price-volume-chart-proxy/issues"
+    "url": "https://github.com/TSON-RH/Proxy-StockPriceChart/issues"
   },
-  "homepage": "https://github.com/TSON-RH/price-volume-chart-proxy#readme"
+  "homepage": "https://github.com/TSON-RH/Proxy-StockPriceChart#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.4.0",
+    "http-proxy": "^1.17.0",
+    "nodemon": "^1.18.6",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
 }
