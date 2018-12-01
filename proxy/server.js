@@ -7,9 +7,9 @@ const app = express();
 const apiProxy = httpProxy.createProxyServer();
 
 const stockPriceChart = 'http://54.212.223.213:3001/',
-      priceVolumeChart = 'ec2-54-193-42-73.us-west-1.compute.amazonaws.com',
+      priceVolumeChart = 'http://ec2-54-193-42-73.us-west-1.compute.amazonaws.com',
       buyService = 'http://ec2-54-183-106-241.us-west-1.compute.amazonaws.com/',
-      peopleAlsoBought = 'http://ec2-18-224-182-229.us-east-2.compute.amazonaws.com/';
+      // peopleAlsoBought = 'http://ec2-18-224-182-229.us-east-2.compute.amazonaws.com/';
 
 app.use(morgan('tiny'));
 app.use(express.static(__dirname + '/public'));
@@ -46,7 +46,6 @@ app.all('/api/buytest', (req, res) => {
 });
 
 app.all('/api/alsoBought/1', (req, res) => {
-  // console.log(req.);
   apiProxy.web(req, res, { target: peopleAlsoBought });
 });
 
