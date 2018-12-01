@@ -8,7 +8,7 @@ const apiProxy = httpProxy.createProxyServer();
 
 const stockPriceChart = 'http://54.212.223.213:3001/',
       priceVolumeChart = 'ec2-54-193-42-73.us-west-1.compute.amazonaws.com',
-      buyService = 'ec2-18-144-63-141.us-west-1.compute.amazonaws.com:3005/',
+      buyService = 'http://ec2-54-183-106-241.us-west-1.compute.amazonaws.com/',
       peopleAlsoBought = 'http://ec2-18-224-182-229.us-east-2.compute.amazonaws.com/';
 
 app.use(morgan('tiny'));
