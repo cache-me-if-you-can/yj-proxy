@@ -45,8 +45,8 @@ app.all('/api/buytest', (req, res) => {
   apiProxy.web(req, res, { target: buyService });
 });
 
-app.all('/api/alsoBought/1', (req, res) => {
-  apiProxy.web(req, res, { target: peopleAlsoBought });
-});
+// app.all('/api/alsoBought/1', (req, res) => {
+//   apiProxy.web(req, res, { target: peopleAlsoBought });
+// });
 
 app.listen(port, () => console.log('Server listening on port ' + port));
