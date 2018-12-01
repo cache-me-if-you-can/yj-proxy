@@ -1,16 +1,17 @@
+const nr = require('newrelic');
 const express = require('express');
-const path = require('path');
 const httpProxy = require('http-proxy');
+const morgan = require('morgan');
 
 const app = express();
 const apiProxy = httpProxy.createProxyServer();
 
-const stockPriceChart = 'http://ec2-35-172-183-27.compute-1.amazonaws.com/',
-      priceVolumeChart = 'http://ec2-34-224-212-238.compute-1.amazonaws.com/',
-      buyService = 'http://ec2-34-200-253-32.compute-1.amazonaws.com/',
+const stockPriceChart = 'http://54.212.223.213:3001/',
+      priceVolumeChart = 'ec2-54-193-42-73.us-west-1.compute.amazonaws.com',
+      buyService = 'ec2-18-144-63-141.us-west-1.compute.amazonaws.com:3005/',
       peopleAlsoBought = 'http://ec2-18-224-182-229.us-east-2.compute.amazonaws.com/';
 
-
+app.use(morgan('tiny'));
 app.use(express.static(__dirname + '/public'));
 const port = 3000;
 
